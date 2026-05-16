@@ -276,15 +276,19 @@ The backend uses a five-skill system for IndiaMart seller upsell recommendations
 Pipeline:
 
 ```text
-Seller raw data
+hackathon 10X backend
   |
-  |-- Skill 01: Seller Profile Analyzer
-  |-- Skill 02: Positive Signals Analyzer
-  |-- Skill 03: Negative Signals Analyzer
-  |
-  `-- Skill 04: Seller Sentiment Analysis
-          |
-          `-- Skill 05: Upsell Decision Engine
+  |-- app
+        |
+        |-- skills
+              |
+              |-- Skill 01: Seller Profile Analyzer
+              |-- Skill 02: Positive Signals Analyzer
+              |-- Skill 03: Negative Signals Analyzer
+              |
+              `-- Skill 04: Seller Sentiment Analysis
+                      |
+                      `-- Skill 05: Upsell Decision Engine
 ```
 
 ### Skills Index
