@@ -1,6 +1,4 @@
-# PitchPro
-
-Ab andaza nahi, smart pitch hogi.
+# PitchPro - Ab andaza nahi, smart pitch hogi.
 
 PitchPro is a full-stack seller upsell recommendation app. It combines a React + Vite frontend with a FastAPI backend that loads seller Excel data, runs a five-skill upsell analysis pipeline, and returns a clear sales recommendation for a selected GLID.
 
