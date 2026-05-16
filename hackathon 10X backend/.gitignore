@@ -1,0 +1,39 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Private or bulky data files
+data/*
+!data/.gitkeep
+!data/README.md
+*.xls
+*.xlsx
+*.xlsb
+*.csv
+*.parquet
+*.pkl
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated outputs
+outputs/
+*.docx
+*.jsonl
+
+# Logs and local files
+logs/
+*.log
+*.local
+.DS_Store
+Thumbs.db

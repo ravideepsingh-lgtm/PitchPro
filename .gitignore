@@ -1,0 +1,58 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+env/
+
+# Build output
+dist/
+dist-ssr/
+build/
+coverage/
+
+# Logs and caches
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.eslintcache
+
+# Private or bulky data files
+*.xls
+*.xlsx
+*.xlsb
+*.csv
+*.parquet
+*.pkl
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated outputs
+outputs/
+*.docx
+*.jsonl
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
