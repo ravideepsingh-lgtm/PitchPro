@@ -294,7 +294,7 @@ Seller raw data
 | 01 | Seller Profile Analyzer | Evaluates business identity, compliance, and scale | Profile score 0 to 25 plus profile flags |
 | 02 | Positive Signals Analyzer | Evaluates platform engagement and seller behavior | Engagement score 0 to 45 plus engagement flags |
 | 03 | Negative Signals Analyzer | Evaluates NI/QRF friction, complaints, and mismatch risk | Friction penalty 0 to -20 plus risk flags |
-| 04 | Seller Sentiment Analysis | Combines profile, engagement, friction, and segment boost | SSS 0 to 80, sentiment class, intent type |
+| 04 | Seller Sentiment Analysis | Combines profile, engagement, friction, and segment boost | Score 0 to 80, sentiment class, intent type |
 | 05 | Upsell Decision Engine | Makes final go/no-go decision and prepares sales brief | Upsell/Hold, recommended tier, call brief |
 
 ### Score Composition
@@ -305,16 +305,16 @@ Seller raw data
 | Engagement Score | Skill 02 | 0 to +45 |
 | Friction Penalty | Skill 03 | 0 to -20 |
 | Prime Segment Boost | Skill 04 | 0 to +10 |
-| Total SSS | Combined | 0 to 80 |
+| Total Score | Combined | 0 to 80 |
 
 ### Decision Outcomes
 
 | Decision | Trigger | Action |
 |---|---|---|
-| Upsell | SSS >= 65 and no blocks | Pitch next domestic tier now |
-| Conditional | SSS 50 to 64 | Pitch with conditions; address gaps first |
-| Monitor | SSS 35 to 49 | No pitch this cycle; re-evaluate in 30 days |
-| Do Not Upsell | SSS < 35 or severe friction | Hold; seller is not ready |
+| Upsell | Score >= 65 and no blocks | Pitch next domestic tier now |
+| Conditional | Score 50 to 64 | Pitch with conditions; address gaps first |
+| Monitor | Score 35 to 49 | No pitch this cycle; re-evaluate in 30 days |
+| Do Not Upsell | Score < 35 or severe friction | Hold; seller is not ready |
 | Hard Block | Complaint open or churn risk | Suspend upsell activity |
 
 ### Domestic Service Hierarchy
@@ -355,7 +355,7 @@ Skill 05 always recommends the immediate next tier only. It should not skip tier
 | `RISK_CATEGORY_MISMATCH` | `wrong_category_ni_qrf > 15` |
 | `RISK_LOCATION_MISMATCH` | `location_ni_qrf > 15` |
 | `RISK_RETAIL_MISMATCH` | `retail_ni_qrf > 15` |
-| `RISK_SEVERE_FRICTION` | `total_ni_qrf > 100`; hard block when SSS < 50 |
+| `RISK_SEVERE_FRICTION` | `total_ni_qrf > 100`; hard block when Score < 50 |
 
 ### Key Rules
 
